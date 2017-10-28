@@ -1,1 +1,4 @@
+#!/bin/bash
+#? Setup local dev env
+
 npm install

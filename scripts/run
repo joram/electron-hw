@@ -1,1 +1,4 @@
+#!/bin/bash
+#? Run app locally
+
 npm start
