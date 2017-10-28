@@ -24,7 +24,6 @@ function build_app() {
 
 
 
-
 ELECTRON_VERSION="v1.8.2-beta.1"
 build_app linux-x64 resources
 build_app darwin-x64 Electron.app/Contents/Resources
