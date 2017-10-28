@@ -3,6 +3,7 @@
 
 function build_app() {
   NAME=$1
+  APP_PATH=$2
   BUILD_DIR=./build/$NAME
   ELECTRON_ZIP="./build/bin/electron_$NAME.zip"
   ELECTRON_ZIP_URL="https://github.com/electron/electron/releases/download/$ELECTRON_VERSION/electron-$ELECTRON_VERSION-$NAME.zip"
@@ -18,10 +19,13 @@ function build_app() {
   fi
 
   unzip -qo $ELECTRON_ZIP -d $BUILD_DIR
-  cp -r ./app $BUILD_DIR
+  cp -r ./app $BUILD_DIR/$APP_PATH
 }
 
+
+
+
 ELECTRON_VERSION="v1.8.2-beta.1"
-build_app "linux-x64"
-build_app "darwin-x64"
-build_app "win32-x64"
+build_app linux-x64 resources
+build_app darwin-x64 Electron.app/Contents/Resources
+build_app win32-x64 resources

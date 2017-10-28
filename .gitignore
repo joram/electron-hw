@@ -5,3 +5,4 @@
 
 scripts/.env
 build/*
+app/node_modules*
